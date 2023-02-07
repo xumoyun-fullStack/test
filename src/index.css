@@ -5,9 +5,525 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.App{
+  padding: 50px;
+}
+
+.employees{
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+
+
+.menu_button{
+  width: 80px;
+  margin: 10px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px #1400FF solid;
+}
+
+.active{
+  background-color: #1400FF;
+  color: #fff;
+  width: 80px;
+  margin: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.emp_input , .change_work_input{
+  height: 43px;
+  border: 2px #1400FF solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #000000;
+  font-weight: bold;
+  margin-right: 20px;
+  outline: none;
+}
+
+.emp_btn, .change_btn, .btn{
+  height: 43px;
+  width: 140px;
+  font-weight: bold;
+  background-color: #1400FF;
+  color: #fff;
+  border:none;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.btn:hover , .change_btn:hover, .emp_btn:hover{
+  box-shadow: #1400FF 0px 0px 10px;
+}
+
+.change_form{
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.table{
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #1400FF;
+  border-collapse: collapse;
+}
+
+td, th{
+  border: 2px #1400FF solid;
+  height: 40px;
+}
+
+tr{
+  border: 1px
+}
+
+td{
+  font-weight: 500;
+}
+
+.loading{
+  margin-top: 100px;
+}
+
+
+.pages{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content:space-around;
+}
+
+option{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.optional{
+  border: 2px rgb(225, 225, 244) solid;
+}
+
+.star{
+  margin-bottom: 19px;
+  position: relative;
+  left: 9px;
+  color:#1400FF
+}
+
+.employees_div{
+  margin-top: 80px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.emp_select{
+  height: 45px;
+  width: 140px;
+}
+
+
+.login_div{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login_form{
+  margin-top: 100px;
+}
+
+.login_input{
+  display: flex;
+  margin: 20px auto;
+  height: 43px;
+  border: 2px #1400FF solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #000000;
+  font-weight: bold;
+  width: 400px;
+  outline: none;
+}
+
+img{
+  width: 500px;
+}
+
+.login_btn{
+  width: 420px;
+}
+
+
+.add_form {
+  width: 50%;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;     
+  margin-top: 60px;
+}
+
+.add_form span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.add_form span label{
+  font-weight: bold;
+}
+.add_input{
+  width: 450px;
+}
+
+.add_select{
+  height: 45px;
+  width: 300px;
+}
+
+.add_btn{
+  width: 300px;
+  margin:0 auto;
+  margin-top: 30px;
+}
+.reason_input{
+  margin-top: 80px;
+}
+
+.search_bar
+{
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: flex;
+  
+}
+
+.btns{
+  margin-top: 80px;
+}
+
+table tbody tr td a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #1400FF;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.emp{
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.emp span{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.emp_btns{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn_emp{
+  width: 200px; 
+}
+
+.ad_btn_visible{
+  visibility: visible;
+}
+
+.ad_btn{
+  visibility: hidden;
+}
+
+.td{
+ color:#fff;
+ padding: 10px 0px;
+}
+
+.search_bar span{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.results{
+  position: absolute;
+  top:48px;
+  width: 190px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 5px;
+  background-color: #ecebee;
+  border-radius: 5px;
+}
+
+.results li{
+  list-style: none;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.results li:hover{
+  background-color: #e2e2e2;
+}
+
+@media (max-width: 1440px) {
+  .App{
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1200px){
+  .emp_input, .change_work_input{
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .employees{
+    font-size: 25px;
+  }
+
+  .add_select{
+    width: 200px;
+  }
+
+  .emp_btn, .change_btn, .btn{
+    width: 100px;
+    height: 35px;
+    font-size: 8px;
+  }
+
+  .menu_button, .active{
+    width: 60px;
+    height: 35px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 10px;
+  }
+
+  td, th{
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .td{
+    font-size: 12px;
+  }
+
+  table tbody tr td a{
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+
+  .add_input{
+    width: 250px
+  }
+
+  .add_form span label{
+    font-size: 12px;
+  }
+
+  .emp{
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 930px){
+  .emp_input, .change_work_input{
+    height: 20px;
+    font-size: 6px;
+  }
+
+  .employees{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .btns{
+    margin-top: 20px
+  }
+
+  .add_select{
+    width: 100px;
+  }
+
+  .change_form{
+    margin-top: 20px;
+  }
+
+  .add_form{
+    margin-top: 20px;
+  }
+
+  .search_bar{
+    
+    margin-bottom: 20px;
+  }
+  .emp_btn, .change_btn, .btn{
+    width: 80px;
+    height: 25px;
+    font-size: 6px;
+  }
+
+  .menu_button, .active{
+    width: 40px;
+    height: 25px;
+    padding: 3px 5px;
+    font-size: 6px;
+  }
+
+  td, th{
+    padding: 3px;
+    font-size: 8px;
+  }
+
+  .td{
+    font-size: 8px;
+  }
+
+  table tbody tr td a{
+    font-size: 6px;
+    padding: 5px 10px;
+  }
+
+  .add_input{
+    width: 150px
+  }
+
+  .add_form span label{
+    font-size: 8px;
+  }
+
+  .emp{
+    font-size: 6px;
+  }
+  .emp_select{
+    width: 80px;
+  }
+
+  .employees_div{
+    margin-top: 20px;
+  }
+
+  .emp_input{
+    margin-top: 10px;
+  }
+
+  option{
+    font-size: 6px;
+    width: 80px;
+  }
+}
+
+@media(max-width: 620px){
+  .emp_input, .change_work_input{
+    height: 20px;
+    font-size: 6px;
+  }
+
+  .employees{
+    font-size: 15px;
+  }
+
+  .add_select{
+    width: 60px;
+  }
+
+  .emp_btn, .change_btn, .btn{
+    width: 60px;
+    height: 20px;
+    font-size: 4px;
+  }
+
+  .menu_button, .active{
+    width: 40px;
+    height: 25px;
+    padding: 3px 5px;
+    font-size: 6px;
+  }
+
+  td, th{
+    padding: 3px;
+    font-size: 4px;
+  }
+
+  .td{
+    font-size: 4px;
+  }
+
+  table tbody tr td a{
+    font-size: 3px;
+    padding: 2px 5px;
+  }
+
+  .add_input{
+    width: 80px
+  }
+
+  .add_form span label{
+    font-size: 6px;
+  }
+
+  .emp{
+    font-size: 6px;
+  }
+  .emp_select{
+    width: 60px;
+  }
+
+  .emp_input{
+    margin-top: 10px;
+    height: 20px;
+  }
+
+  option{
+    font-size: 6px;
+    width: 80px;
+  }
+  .btn_emp{
+    font-size: 4px;
+    width: 50px
+  }
 }
